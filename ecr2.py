@@ -48,7 +48,7 @@ def encryptV(message, key):
         if message[i].lower() in ALPHABET:  # проверяем, является ли символ буквой
             pos_mes = ALPHABET.find(message[i].lower())
             pos_key = ALPHABET.find(full_key[key_index])
-            encrypted_letter = matrix[pos_mes][pos_key]
+            encrypted_letter = VIGENERE_MATRIX[pos_mes][pos_key]
             #для заглавных:
             if message[i].isupper():
                 encrypted_letter = encrypted_letter.upper()
