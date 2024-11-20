@@ -10,8 +10,6 @@ def generate_vigenere_matrix():
         matrix.append(row)
     return matrix
 
-VIGENERE_MATRIX = generate_vigenere_matrix()
-
 def encryptC(message, key):
     encrypted_message = ""
     for c in message:
@@ -32,6 +30,7 @@ def encryptC(message, key):
 
 
 def encryptV(message, key):
+    VIGENERE_MATRIX = generate_vigenere_matrix()
     encrypted_message = ""
     full_key = ""
     key_index = 0  # индекс для отслеживания текущего символа ключа
