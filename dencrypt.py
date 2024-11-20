@@ -2,15 +2,6 @@ import string
 
 ALPHABET = string.ascii_lowercase
 
-def generate_vigenere_matrix():
-    matrix = []
-    for i in range(len(ALPHABET)):
-        row = ALPHABET[i:] + ALPHABET[:i]
-        matrix.append(row)
-    return matrix
-
-VIGENERE_MATRIX = generate_vigenere_matrix()
-
 def decryptC(message, key):
     decrypted_message = ""
     for c in message:
